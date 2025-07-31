@@ -1,0 +1,11 @@
+server:
+  port: 8443
+  update_interval: 5  # seconds
+  allowed_origins:
+    - "http://localhost:3000"
+
+security:
+  jwt_secret: "change-this-in-production"  # تغییر این مقدار در محیط تولید الزامی است
+  allowed_ips: []  # خالی به معنی اجازه به همه IP ها است
+  ssl_cert_file: ""  # مسیر فایل گواهی SSL
+  ssl_key_file: ""   # مسیر فایل کلید SSL

@@ -1,0 +1,17 @@
+[Unit]
+Description=Server Monitoring Panel
+After=network.target
+
+[Service]
+Type=simple
+User=root
+WorkingDirectory=/opt/server-monitor
+ExecStart=/opt/server-monitor/server
+Restart=always
+RestartSec=5
+StandardOutput=syslog
+StandardError=syslog
+SyslogIdentifier=server-monitor
+
+[Install]
+WantedBy=multi-user.target
